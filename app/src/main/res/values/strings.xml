@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">WaterDeliveryApp</string>
+
+  <!--  screen name-->
+    <string name="splash_screen">Splash Screen</string>
+    <string name="on_boarding_screen">On Boarding Screen</string>
+    <string name="welcome_screen">Welcome Screen</string>
+    <string name="login_screen">Login Screen</string>
+    <string name="registration_screen">Registration Screen</string>
+    
+    <!--splash screen content-->
+    <string name="drips_water">Drips Water</string>
+    <string name="get_started">Get Started</string>
+    <string name="next">Next</string>
+    
+    <!--onBoarding screen content-->
+    <string name="illustration_title">We provide best quality water </string>
+    <string name="illustration_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed </string>
+    <string name="cart_title">Schedule when you want your water delivered</string>
+    <string name="cart_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed </string>
+    <string name="delivery_title">Fast and responsibily delivery </string>
+    <string name="delivery_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed </string>
+
+   <!-- welcome screen content-->
+    <string name="welcome_txt_title">Welcome to Drips water</string>
+    <string name="welcome_txt_sub_title">Water Delivery app</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="login">Login</string>
+    <string name="continue_as_guest">Continue as Guest</string>
+    
+    <!--login screen-->
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="login_instruction">Please fill in your email password to login to your account.</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="dont_have_account">Don\'t have an account?</string>
+    <string name="sign_up">Sign up</string>
+    <string name="email_hint">example@gmail.com</string>
+    <string name="password_hint">**********</string>
+    <!--Registration Screen-->
+    <string name="create_your_account">Create your Account</string>
+    <string name="registration_instruction">Please fill in your details to create your account.</string>
+    <string name="name">Name</string>
+    <string name="name_hint">Example </string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="sign_in">Sign in</string>
+
+</resources>
