@@ -40,7 +40,7 @@ fun AppNavigation() {
     ) {
         NavHost(
             navController = navController,
-            startDestination = NavigationScreenName.REGISTRATION_SCREEN.name,
+            startDestination = NavigationScreenName.HOME_USER_SCREEN.name,
             modifier = Modifier.background(color = MaterialTheme.colorScheme.onPrimary).padding(it)
         ) {
             NavGraphBuilder(
@@ -86,5 +86,8 @@ fun NavGraphBuilder(
     }
     navGraphBuilder.composable(route = NavigationScreenName.REGISTRATION_SCREEN.name){
         registrationScreen()
+    }
+    navGraphBuilder.composable(route = NavigationScreenName.HOME_USER_SCREEN.name){
+
     }
 }

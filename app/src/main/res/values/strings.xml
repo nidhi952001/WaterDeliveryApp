@@ -7,6 +7,7 @@
     <string name="welcome_screen">Welcome Screen</string>
     <string name="login_screen">Login Screen</string>
     <string name="registration_screen">Registration Screen</string>
+    <string name="home_user_screen">Home User Screen</string>
     
     <!--splash screen content-->
     <string name="drips_water">Drips Water</string>
@@ -46,5 +47,8 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="already_have_an_account">Already have an account?</string>
     <string name="sign_in">Sign in</string>
+
+    <!--homeScreen for user-->
+    <string name="search">Search. . .</string>
 
 </resources>

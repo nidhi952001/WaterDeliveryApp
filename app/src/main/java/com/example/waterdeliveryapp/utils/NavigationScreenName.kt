@@ -11,5 +11,6 @@ enum class NavigationScreenName(
     ONBOARDING_SCREEN(route = R.string.on_boarding_screen),
     WELCOME_SCREEN(route = R.string.welcome_screen),
     LOGIN_SCREEN(route = R.string.login_screen),
-    REGISTRATION_SCREEN(route = R.string.registration_screen)
+    REGISTRATION_SCREEN(route = R.string.registration_screen),
+    HOME_USER_SCREEN(route = R.string.home_user_screen)
 }
