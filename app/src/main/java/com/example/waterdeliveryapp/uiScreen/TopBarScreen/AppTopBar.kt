@@ -30,6 +30,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.util.fastCbrt
 import androidx.navigation.NavHostController
@@ -78,11 +79,10 @@ fun topBarWithLeadingArrow(navController: NavHostController) {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun topBarWithSearch() {
-    Scaffold {
             Column(
                 modifier = Modifier.fillMaxWidth()
-                    .background(color = MaterialTheme.colorScheme.primaryContainer).padding(it)
-                    .padding(horizontal = 10.dp).padding(top = 10.dp)
+                    .background(color = MaterialTheme.colorScheme.primaryContainer)
+                    .padding(horizontal = 10.dp).padding(top = 50.dp, bottom = 10.dp)
             ) {
                 Text(
                     text = stringResource(R.string.welcome_back),
@@ -94,7 +94,7 @@ fun topBarWithSearch() {
                     fontWeight = FontWeight.ExtraBold
                 )
                 OutlinedTextField(
-                    modifier = Modifier.fillMaxWidth().wrapContentHeight().padding(top = 10.dp),
+                    modifier = Modifier.fillMaxWidth().padding(top = 10.dp),
                     value = "",
                     onValueChange = {},
                     placeholder = {
@@ -120,7 +120,10 @@ fun topBarWithSearch() {
                     )
                 )
             }
-    }
 }
 
-
+@Composable
+@Preview
+fun topBarWithSearchPreview(){
+    topBarWithSearch()
+}

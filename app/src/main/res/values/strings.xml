@@ -50,5 +50,23 @@
 
     <!--homeScreen for user-->
     <string name="search">Search. . .</string>
+    <string name="slider">slider</string>
+    <string name="drips_springs">Drips Springs</string>
+    <string name="bottle_water_delivery">Bottle Water Delivery</string>
+    <string name="water_type">Water type</string>
+
+    <!--home screen filters-->
+    <string name="all">All</string>
+    <string name="distilled">Distilled</string>
+    <string name="spring">Spring</string>
+    <string name="purified">Purified</string>
+
+    <string name="drips_spring_water">Drips Spring Water</string>
+    <string name="drips_distilled_water">Drips Distilled Water</string>
+    <string name="drips_purified_water">Drips Purified Water</string>
+
+    <string name="hundred">$100</string>
+    <string name="hundred_fifty">$150</string>
+    <string name="two_hundred">$200</string>
 
 </resources>

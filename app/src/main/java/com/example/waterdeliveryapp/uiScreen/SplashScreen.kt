@@ -50,7 +50,6 @@ import kotlinx.coroutines.launch
 
 @Composable
 fun spalshScreen(modifier: Modifier) {
-    val light_blue = colorResource(R.color.light_blue)
     Column(
         modifier = modifier.background(color = MaterialTheme.colorScheme.primaryContainer),
         verticalArrangement = Arrangement.Center,
@@ -67,13 +66,10 @@ fun spalshScreen(modifier: Modifier) {
 
 @Composable
 fun OnBoardingScreenRoute(onGetStarted:()->Unit) {
-
     val coroutine = rememberCoroutineScope()
     val homeViewModel:HomeViewModel = hiltViewModel()
     val homeScreenUIState by homeViewModel.homeUiState.collectAsState()
     val pagerState = rememberPagerState(initialPage = 0, pageCount = { boardingData.data.size })
-
-
     OnBoardingScreen(Modifier.fillMaxSize(), pagerState, homeScreenUIState, coroutine, onGetStarted)
 }
 

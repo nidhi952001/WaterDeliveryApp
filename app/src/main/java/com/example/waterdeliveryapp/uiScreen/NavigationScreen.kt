@@ -88,6 +88,6 @@ fun NavGraphBuilder(
         registrationScreen()
     }
     navGraphBuilder.composable(route = NavigationScreenName.HOME_USER_SCREEN.name){
-
+        HomeScreenUserRoute()
     }
 }
