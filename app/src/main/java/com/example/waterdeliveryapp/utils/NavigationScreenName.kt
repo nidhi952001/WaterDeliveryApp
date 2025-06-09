@@ -12,5 +12,9 @@ enum class NavigationScreenName(
     WELCOME_SCREEN(route = R.string.welcome_screen),
     LOGIN_SCREEN(route = R.string.login_screen),
     REGISTRATION_SCREEN(route = R.string.registration_screen),
-    HOME_USER_SCREEN(route = R.string.home_user_screen)
+    HOME_USER_SCREEN(route = R.string.home_user_screen),
+    CART_SCREEN(route = R.string.shopping_cart),
+    FAVOURITE_SCREEN(route = R.string.favourite),
+    MY_PROFILE_SCREEN(route = R.string.profile),
+    PRODUCT_SCREEN(route = R.string.product)
 }

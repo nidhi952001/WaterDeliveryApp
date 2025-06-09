@@ -16,9 +16,12 @@ import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.FavoriteBorder
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -195,6 +198,16 @@ fun content() {
                             elevation = 0.dp,
                             shape = RoundedCornerShape(5.dp)
                         )
+                    )
+                    Icon(
+                        imageVector = Icons.Outlined.FavoriteBorder,
+                        contentDescription = stringResource(R.string.favourite),
+                        modifier = Modifier
+                            .padding(3.dp)
+                            .align(Alignment.TopEnd)
+                            .clip(RoundedCornerShape(6.dp))
+                            .background(color = MaterialTheme.colorScheme.outline.copy(alpha = 0.6F))
+                            .padding(3.dp)
                     )
                 }
                 Column(modifier = Modifier.fillMaxWidth()

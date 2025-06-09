@@ -3,7 +3,6 @@ package com.example.waterdeliveryapp.uiScreen
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
@@ -11,14 +10,12 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.example.waterdeliveryapp.uiScreen.TopBarScreen.AppTopBar
 import com.example.waterdeliveryapp.utils.NavigationScreenName
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.delay
@@ -36,11 +33,17 @@ fun AppNavigation() {
             AppTopBar(
                 navController= navController,
                 currentRoute = currentRoute)
+        },
+        bottomBar = {
+            BottomBarScreen(
+                navController = navController,
+                currentRoute = currentRoute
+            )
         }
     ) {
         NavHost(
             navController = navController,
-            startDestination = NavigationScreenName.HOME_USER_SCREEN.name,
+            startDestination = NavigationScreenName.PRODUCT_SCREEN.name,
             modifier = Modifier.background(color = MaterialTheme.colorScheme.onPrimary).padding(it)
         ) {
             NavGraphBuilder(
@@ -89,5 +92,8 @@ fun NavGraphBuilder(
     }
     navGraphBuilder.composable(route = NavigationScreenName.HOME_USER_SCREEN.name){
         HomeScreenUserRoute()
+    }
+    navGraphBuilder.composable(route = NavigationScreenName.PRODUCT_SCREEN.name){
+        ProductScreenRoute()
     }
 }

@@ -1,38 +1,41 @@
-package com.example.waterdeliveryapp.uiScreen.TopBarScreen
+package com.example.waterdeliveryapp.uiScreen
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material3.DockedSearchBar
+import androidx.compose.material.icons.outlined.Favorite
+import androidx.compose.material.icons.sharp.ArrowBack
+import androidx.compose.material.icons.sharp.Favorite
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.SearchBar
-import androidx.compose.material3.SearchBarDefaults
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextField
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.util.fastCbrt
 import androidx.navigation.NavHostController
 import com.example.waterdeliveryapp.R
 import com.example.waterdeliveryapp.utils.NavigationScreenName
@@ -48,6 +51,9 @@ fun AppTopBar(navController: NavHostController, currentRoute: String?) {
 
         NavigationScreenName.HOME_USER_SCREEN.name -> {
             topBarWithSearch()
+        }
+        NavigationScreenName.PRODUCT_SCREEN.name->{
+            ProductScreenTopBar()
         }
 
     }
@@ -123,7 +129,37 @@ fun topBarWithSearch() {
 }
 
 @Composable
+fun ProductScreenTopBar(){
+    Box(modifier = Modifier.fillMaxWidth()) {
+        Image(
+            painter = painterResource(R.drawable.springwater_full),
+            contentDescription = stringResource(R.string.drips_purified_water),
+            contentScale = ContentScale.FillBounds,
+            modifier = Modifier.fillMaxWidth().fillMaxHeight(0.5F)
+        )
+        Icon(
+            imageVector = Icons.Sharp.ArrowBack,
+            contentDescription = stringResource(R.string.back_arrow),
+            tint = MaterialTheme.colorScheme.onPrimary,
+            modifier = Modifier.align(Alignment.TopStart)
+                .padding(start = 20.dp, top = 50.dp)
+        )
+        Icon(
+            imageVector = Icons.Outlined.Favorite,
+            contentDescription = stringResource(R.string.favourite),
+            tint = MaterialTheme.colorScheme.onPrimary,
+            modifier = Modifier
+                .align(Alignment.TopEnd)
+                .padding(end = 20.dp, top = 50.dp)
+                .clip(RoundedCornerShape(5.dp))
+                .background(color = MaterialTheme.colorScheme.onSurface)
+                .padding(5.dp)
+        )
+    }
+}
+
+@Composable
 @Preview
 fun topBarWithSearchPreview(){
-    topBarWithSearch()
+    ProductScreenTopBar()
 }

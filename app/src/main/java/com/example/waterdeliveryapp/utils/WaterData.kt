@@ -2,6 +2,16 @@ package com.example.waterdeliveryapp.utils
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.filled.FavoriteBorder
+import androidx.compose.material.icons.outlined.Favorite
+import androidx.compose.material.icons.outlined.FavoriteBorder
+import androidx.compose.material.icons.outlined.Home
+import androidx.compose.material.icons.outlined.Person
+import androidx.compose.material.icons.outlined.ShoppingCart
+import androidx.compose.material.icons.sharp.Favorite
+import androidx.compose.ui.graphics.vector.ImageVector
 import com.example.waterdeliveryapp.R
 
 data class WaterData(
@@ -18,4 +28,19 @@ object homeScreenData {
         WaterData(R.drawable.purifiedwater,R.string.drips_purified_water,R.string.two_hundred),
     )
 
+}
+
+data class BottomBarData(
+    val image: ImageVector,
+    @StringRes val description: Int,
+    val screenName:String
+)
+
+object bottomBarDataList{
+    var nav = listOf(
+        BottomBarData(Icons.Outlined.Home, R.string.home,NavigationScreenName.HOME_USER_SCREEN.name),
+        BottomBarData(Icons.Outlined.ShoppingCart,R.string.shopping_cart,NavigationScreenName.CART_SCREEN.name),
+        BottomBarData(Icons.Outlined.FavoriteBorder,R.string.favourite,NavigationScreenName.FAVOURITE_SCREEN.name),
+        BottomBarData(Icons.Outlined.Person,R.string.profile,NavigationScreenName.MY_PROFILE_SCREEN.name)
+    )
 }

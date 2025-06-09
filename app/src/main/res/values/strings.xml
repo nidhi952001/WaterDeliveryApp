@@ -8,6 +8,7 @@
     <string name="login_screen">Login Screen</string>
     <string name="registration_screen">Registration Screen</string>
     <string name="home_user_screen">Home User Screen</string>
+    <string name="product">Product</string>
     
     <!--splash screen content-->
     <string name="drips_water">Drips Water</string>
@@ -69,4 +70,15 @@
     <string name="hundred_fifty">$150</string>
     <string name="two_hundred">$200</string>
 
+
+    <!--bottom bar screen-->
+    <string name="home">Home</string>
+    <string name="shopping_cart">Shopping Cart</string>
+    <string name="favourite">Favourite</string>
+    <string name="profile">Profile</string>
+
+
+    <!--product page-->
+    <string name="available_in_stock">(Available in Stock)</string>
+    <string name="back_arrow">Back Arrow</string>
 </resources>
