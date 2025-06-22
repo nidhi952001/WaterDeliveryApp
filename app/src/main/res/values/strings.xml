@@ -21,7 +21,7 @@
     <string name="cart_title">Schedule when you want your water delivered</string>
     <string name="cart_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed </string>
     <string name="delivery_title">Fast and responsibily delivery </string>
-    <string name="delivery_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed </string>
+    <string name="delivery_desc">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam </string>
 
    <!-- welcome screen content-->
     <string name="welcome_txt_title">Welcome to Drips water</string>
@@ -81,4 +81,8 @@
     <!--product page-->
     <string name="available_in_stock">(Available in Stock)</string>
     <string name="back_arrow">Back Arrow</string>
+    <string name="rating_star">Rating Star</string>
+    <string name="review">(128 reviews)</string>
+    <string name="bottle_size">Bottle size</string>
+    <string name="quantity">Quantity</string>
 </resources>

@@ -15,6 +15,7 @@ import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.outlined.Favorite
+import androidx.compose.material.icons.outlined.ShoppingCart
 import androidx.compose.material.icons.sharp.ArrowBack
 import androidx.compose.material.icons.sharp.Favorite
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -153,6 +154,17 @@ fun ProductScreenTopBar(){
                 .padding(end = 20.dp, top = 50.dp)
                 .clip(RoundedCornerShape(5.dp))
                 .background(color = MaterialTheme.colorScheme.onSurface)
+                .padding(5.dp)
+        )
+        Icon(
+            imageVector = Icons.Outlined.ShoppingCart,
+            contentDescription = stringResource(R.string.shopping_cart),
+            tint = MaterialTheme.colorScheme.inversePrimary,
+            modifier = Modifier
+                .align(Alignment.BottomEnd)
+                .padding(end = 20.dp, bottom = 20.dp)
+                .clip(RoundedCornerShape(5.dp))
+                .background(color = MaterialTheme.colorScheme.onPrimary)
                 .padding(5.dp)
         )
     }

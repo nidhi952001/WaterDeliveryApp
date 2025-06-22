@@ -56,7 +56,7 @@ fun BottomBarScreen(navController: NavHostController, currentRoute: String?) {
                                 if(it.screenName == NavigationScreenName.HOME_USER_SCREEN.name)
                                     Box(
                                         modifier = Modifier.size(5.dp).clip(CircleShape)
-                                            .background(color = MaterialTheme.colorScheme.primaryContainer)
+                                            .background(color = MaterialTheme.colorScheme.inversePrimary)
                                     )
                             }
 
